@@ -32,10 +32,9 @@ function RemoverElemento(indice) {
 }
 
 function FavoritarElemento(indice) {
-  alert("Adicionado aos favoritos!");
-  let favoritada = array_musicas.splice(indice, 1);
-  lista_de_favoritos.push(lista_de_favoritos);
-  localStorage.setItem("favoritos", JSON.stringify(lista_de_favoritos));
+  const favoritos = JSON.parse(localStorage.getItem("favoritos")) || []; 
+  favoritos.push(array_musicas[indice]); 
+  localStorage.setItem("favoritos", JSON.stringify(favoritos));
 }
 
 MostrarLista();
