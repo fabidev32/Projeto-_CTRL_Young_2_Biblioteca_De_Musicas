@@ -37,6 +37,13 @@ body {
   width: 300px;
 }
 
+.div-menu ul li:hover {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  background-color: #837797;
+  border: 5px solid #655970;
+}
+
 .div-menu ul li a {
   font-family: Arial;
   font-variant: small-caps;
@@ -83,98 +90,138 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  width: 60%;
   background-color: #f7f0f0e5;
 }
 
 .div_bem_vindo h2 {
   font-size: 30px;
 }
-.div_bem_vindo p{
+.div_bem_vindo p {
   font-size: 20px;
 }
 
+/* Grid de músicas */
 
-.no_dia_em_eu_sai_de_casa {
-  display: flex;
-  flex-direction: column;
-  background-color: #f7f0f0e5;
-  padding: 5px;
-  border: 1px solid rgb(170, 166, 166);
+.grid_musicas {
+  display: grid;
+  grid-template-columns: repeat(6fr);
+  grid-template-rows: repeat(2fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  width: 80%;
 }
 
-.no_dia_em_eu_sai_de_casa .div_imagem_e_letra {
+.musica_01 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.musica_02 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.musica_03 {
+  grid-column: 4/6;
+  grid-row: 1/2;
+  background-color: #5a5757;
+}
+.musica_04 {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  background-color: #655970;
+}
+
+.musica_05 {
+  grid-column: 3/6;
+  grid-row: 2/3;
+}
+
+.div_musica {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 20px;
-  padding: 5px;
+  background-color: #655970;
+  border: 5px solid rgb(247, 243, 243);
+  border-radius: 30px;
 }
 
-.no_dia_em_eu_sai_de_casa h2 {
-  font-size: 30px;
+.div_musica div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.div_musica img {
+  width: 200px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
+}
+
+.div_musica h2 {
   font-family: Impact, fantasy;
   text-align: center;
   font-weight: lighter;
+  color: white;
 }
 
-.no_dia_em_eu_sai_de_casa p {
+.div_musica p {
   font-family:
     Courier New,
     monospace;
   font-size: 15px;
   text-align: justify;
+  color: white;
+  width: 70%;
 }
 
-.no_dia_em_eu_sai_de_casa img {
-  width: 400px;
-  height: 300px;
-}
+/* Seção estilos de música */
 
-.div_imagem_e_letra div {
-  width: 50%;
-}
-
-/* Div músicas desenho */
-
-.lembre_de_mim {
+.div_estilos_musica {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #362f2fe5;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  background-color: #f7f0f0e5;
+}
+
+.div_estilos_musica div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.div_estilos_musica div p {
+  width: 100px;
   padding: 5px;
-  border: 3px solid #655970;
-  border-radius: 5px;
-  margin: 10px;
+  color: white;
+  background-color: #837797;
+  border-radius: 20px;
+  border: 5px solid #a79db1
 }
 
-.lembre_de_mim h2 {
-  font-size: 20px;
-}
+/* Footer */
 
-.lembre_de_mim p, a {
-font-family:
-    Courier New,
-    monospace;
-  }
-
-.lembre_de_mim img {
-  width: 400px;
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
   height: 300px;
+  background-color: #837797;
+  text-align: center;
 }
-
-.lembre_de_mim .div_imagem_e_letra {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.musicas_desenho {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
