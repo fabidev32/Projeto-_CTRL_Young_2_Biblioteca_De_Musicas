@@ -1,0 +1,149 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #e8dfc8;
+}
+
+h3 {
+  color: #655970;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  gap: 20px;
+}
+
+/* Container cadastro */
+
+.container_cadastro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div_formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  gap: 20px;
+  border-radius: 20px;
+  border: 5px solid white;
+  background-color: #655970;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.div_formulario h3 {
+  font-size: 30px;
+  color: white;
+  font-family: FreeMono, monospace;
+}
+
+.div_formulario div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin: 30px;
+}
+
+#botao {
+  border-radius: 80px;
+  background-color: #837797;
+  border: 5px solid #bf92e4;
+  width: 250px;
+  height: 50px;
+  color: #f5f4f7;
+  font-family: FreeMono, monospace;
+  font-size: 20px;
+}
+
+input {
+  width: 400px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+input::placeholder {
+  font-family: FreeMono, monospace;
+  font-size: 20px;
+  padding: 10px;
+}
+
+label {
+  font-size: 20px;
+  color: white;
+  font-family: FreeMono, monospace;
+  height: 30px;
+  background-color: #b594cf;
+  border-radius: 10px;
+  border: 4px solid white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#button {
+  margin-top: 20px;
+  border-radius: 80px;
+  background-color: #3f0071;
+  border: 5px solid #bf92e4;
+  width: 250px;
+  height: 50px;
+  color: #f5f4f7;
+  font-family: FreeMono, monospace;
+  font-size: 20px;
+}
+
+/* Container lista  */
+
+.lista_de_musicas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_musica {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #655970;
+  border: 5px solid rgb(247, 243, 243);
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.card_musica p {
+  font-size: 20px;
+}
+
+.card_musica img {
+  width: 200px;
+  border-radius: 20px;
+}
+
+.card_musica button {
+  margin-top: 20px;
+  border-radius: 80px;
+  background-color: #3f0071;
+  border: 5px solid #bf92e4;
+  width: 250px;
+  height: 50px;
+  color: #f5f4f7;
+  font-family: FreeMono, monospace;
+  font-size: 20px;
+}
