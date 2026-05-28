@@ -1,183 +1,179 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./../css/home.css" class="stylesheet" />
-  </head>
-  <body>
-    <header>
-      <nav class="container-header">
-        <div class="div-menu">
-          <div class="div-logo">
-            <img id="img-logo" src="../images/logo.png" alt="Logo da empresa" />
-            <p>MusicPlay</p>
-          </div>
-          <ul>
-            <li><a onclick="BotaoBemVindo()"> Sobre a biblioteca </a></li>
-            <li><a href="./cadastro.html"> Cadastro de novas músicas </a></li>
-            <li>
-              <a href="./formulario.html"> Músicas Favoritas </a>
-            </li>
-            <li><a href=""> Contato </a></li>
-          </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./../css/home.css" class="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="container-header">
+      <div class="div-menu">
+        <div class="div-logo">
+          <img id="img-logo" src="./../images/logo.png" alt="Logo da empresa" />
+          <p>MusicPlay</p>
         </div>
-      </nav>
-    </header>
+        <ul>
+          <li><a onclick="BotaoBemVindo()"> Sobre a biblioteca </a></li>
+          <li><a href="./cadastro.html"> Cadastro de novas músicas </a></li>
+          <li>
+            <a href="./formulario.html"> Músicas Favoritas </a>
+          </li>
+          <li><a href=""> Contato </a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-      <section class="primeira_secao">
-        <div class="div_bem_vindo">
-          <h2>Conheça minha biblioteca de músicas!</h2>
-          <p>De eletrônica até sertanejo, as melhores músicas estão aqui!</p>
+  <main>
+
+    <!-- Carrossel de imagens -->
+    <section class="section_imagens">
+      <img id="anterior" src="./../imagens/anterior.png" alt="Ícone anterior" onclick="Anterior()" />
+      <div class="carrossel_de_imagens">
+        <div class="carrossel_trilho">
+          <img src="./../images/musica.png" alt="Imagem do carrossel" />
+          <img src="./../images/musica.png" alt="Imagem do carrossel" />
+          <img src="./../images/musica.png" alt="Imagem do carrossel" />
+          <img src="./../images/musica.png" alt="Imagem do carrossel" />
         </div>
+      </div>
+      <img id="proximo" src="./../imagens/proximo.png" alt="Ícone próximo" onclick="Proximo()" />
+    </section>
 
-        <section class="grid_musicas">
-          <!-- Primeira música -->
-          <div class="musica_01 div_musica">
-            <h2>Título da música</h2>
-            <img src="./../images/musica.png" alt="Imagem da música" />
-            <div>
-              <p>
-                Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
-                pra sorrir Não importa a distância Nunca vou te esquecer
-                Cantando a nossa música O amor só vai crescer
-              </p>
 
-              <audio
-                src="./../musicas/nome_musica.mp3"
-                controls
-                autoplay
-              ></audio>
-              
-            </div>
-          </div>
+    <section class="primeira_secao">
+      <div class="div_bem_vindo">
+        <h2>Conheça minha biblioteca de músicas!</h2>
+        <p>De eletrônica até sertanejo, as melhores músicas estão aqui!</p>
+      </div>
 
-          <!-- Segunda música -->
-
-          <div class="musica_02 div_musica">
-            <h2>Título da música</h2>
-            <img src="./../images/musica.png" alt="Imagem da música" />
-            <div>
-              <p>
-                Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
-                pra sorrir Não importa a distância Nunca vou te esquecer
-                Cantando a nossa música O amor só vai crescer
-              </p>
-
-              <audio
-                src="./../musicas/nome_musica.mp3"
-                controls
-                autoplay
-              ></audio>
-            </div>
-          </div>
-
-          <!-- Terceira música -->
-
-          <div class="musica_03 div_musica">
-            <h2>Título da música</h2>
-            <img src="./../images/musica.png" alt="Imagem da música" />
-            <div>
-              <p>
-                Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
-                pra sorrir Não importa a distância Nunca vou te esquecer
-                Cantando a nossa música O amor só vai crescer
-              </p>
-
-              <audio
-                src="./../musicas/nome_musica.mp3"
-                controls
-                autoplay
-              ></audio>
-            </div>
-          </div>
-
-          <!-- Quarta música -->
-          <div class="musica_04 div_musica">
-            <
-            <h2>Título da música</h2>
-            <img src="./../images/musica.png" alt="Imagem da música" />
-            <div>
-              <p>
-                Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
-                pra sorrir Não importa a distância Nunca vou te esquecer
-                Cantando a nossa música O amor só vai crescer
-              </p>
-
-              <audio
-                src="./../musicas/nome_musica.mp3"
-                controls
-                autoplay
-              ></audio>
-            </div>
-          </div>
-
-          <div class="musica_05 div_musica">
-            <h2>Título da música</h2>
-            <img src="./../images/musica.png" alt="Imagem da música" />
-            <div>
-              <p>
-                Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
-                pra sorrir Não importa a distância Nunca vou te esquecer
-                Cantando a nossa música O amor só vai crescer
-              </p>
-
-              <audio src="./../musicas/nome_musica.mp3" controls></audio>
-            </div>
-          </div>
-        </section>
-
-        <div class="div_estilos_musica">
-          <h2>Confira abaixo todos os estilos de música</h2>
+      <section class="grid_musicas">
+        <!-- Primeira música -->
+        <div class="musica_01 div_musica">
+          <h2>Título da música</h2>
+          <img src="./../images/musica.png" alt="Imagem da música" />
           <div>
-            <p>Rock</p>
-            <p>Rock</p>
-            <p>Rock</p>
-            <p>Rock</p>
-            <p>Rock</p>
-            <p>Rock</p>
+            <p>
+              Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
+              pra sorrir Não importa a distância Nunca vou te esquecer
+              Cantando a nossa música O amor só vai crescer
+            </p>
+
+            <audio src="./../musicas/nome_musica.mp3" controls autoplay></audio>
+
+          </div>
+        </div>
+
+        <!-- Segunda música -->
+
+        <div class="musica_02 div_musica">
+          <h2>Título da música</h2>
+          <img src="./../images/musica.png" alt="Imagem da música" />
+          <div>
+            <p>
+              Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
+              pra sorrir Não importa a distância Nunca vou te esquecer
+              Cantando a nossa música O amor só vai crescer
+            </p>
+
+            <audio src="./../musicas/nome_musica.mp3" controls autoplay></audio>
+          </div>
+        </div>
+
+        <!-- Terceira música -->
+
+        <div class="musica_03 div_musica">
+          <h2>Título da música</h2>
+          <img src="./../images/musica.png" alt="Imagem da música" />
+          <div>
+            <p>
+              Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
+              pra sorrir Não importa a distância Nunca vou te esquecer
+              Cantando a nossa música O amor só vai crescer
+            </p>
+
+            <audio src="./../musicas/nome_musica.mp3" controls autoplay></audio>
+          </div>
+        </div>
+
+        <!-- Quarta música -->
+        <div class="musica_04 div_musica">
+          <h2>Título da música</h2>
+          <img src="./../images/musica.png" alt="Imagem da música" />
+          <div>
+            <p>
+              Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
+              pra sorrir Não importa a distância Nunca vou te esquecer
+              Cantando a nossa música O amor só vai crescer
+            </p>
+
+            <audio src="./../musicas/nome_musica.mp3" controls autoplay></audio>
+          </div>
+        </div>
+
+        <div class="musica_05 div_musica">
+          <h2>Título da música</h2>
+          <img src="./../images/musica.png" alt="Imagem da música" />
+          <div>
+            <p>
+              Lembre de mim Hoje eu tenho que partir Lembre de mim Se esforce
+              pra sorrir Não importa a distância Nunca vou te esquecer
+              Cantando a nossa música O amor só vai crescer
+            </p>
+
+            <audio src="./../musicas/nome_musica.mp3" controls></audio>
           </div>
         </div>
       </section>
 
-      <!-- Section 02 -->
-      
-    </main>
-
-    <footer>
-      <div>
-        <div class="div-redes-sociais">
-          <a href="https://www.seusite.com">
-            <img
-              id="redeSocial"
-              src="./../assets/facebook.png"
-              alt="Logo Facebook"
-            />
-          </a>
-          <a href="https://www.seusite.com">
-            <img
-              id="redeSocial"
-              src="./../assets/instagram.png"
-              alt="Logo Facebook"
-            />
-          </a>
-          <a href="https://www.seusite.com">
-            <img
-              id="redeSocial"
-              src="./../assets/linkedin.png"
-              alt="Logo Facebook"
-            />
-          </a>
-        </div>
-        <div class="div-contatos">
-          <p>beiralinha@gmail.com</p>
-          <p>(31) 99876-1234</p>
+      <div class="div_estilos_musica">
+        <h2>Confira abaixo todos os estilos de música</h2>
+        <div>
+          <p>Rock</p>
+          <p>Rock</p>
+          <p>Rock</p>
+          <p>Rock</p>
+          <p>Rock</p>
+          <p>Rock</p>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src = "./../javascript/home.js"></script>
-  </body>
+    <!-- Section 02 -->
+
+    <h2> Veja abaixo o gênero com maior cadastro! </h2>
+    <div class="div_ranking_genero"></div>
+
+
+    <!-- Section 3-->
+
+  </main>
+
+  <footer>
+    <div>
+      <div class="div-redes-sociais">
+        <a href="https://www.seusite.com">
+          <img id="redeSocial" src="./../assets/facebook.png" alt="Logo Facebook" />
+        </a>
+        <a href="https://www.seusite.com">
+          <img id="redeSocial" src="./../assets/instagram.png" alt="Logo Facebook" />
+        </a>
+        <a href="https://www.seusite.com">
+          <img id="redeSocial" src="./../assets/linkedin.png" alt="Logo Facebook" />
+        </a>
+      </div>
+      <div class="div-contatos">
+        <p>beiralinha@gmail.com</p>
+        <p>(31) 99876-1234</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./../javascript/home.js"></script>
+</body>
+
 </html>

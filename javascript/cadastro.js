@@ -1,21 +1,29 @@
-//Elementos HTML
-let descricao = document.querySelector("#descricao");
-let nome = document.querySelector("#nome");
-let link = document.querySelector("#link");
-let input_com_imagem = document.getElementById("input_com_imagem");
-let inpuy_com_audio = document.getElementById("input_com_audio");
+const nome = document.getElementById("nome");
+// let genero = document.getElementById("genero");
+let genero = document.querySelector(".genero");
 let lista_de_musicas = document.querySelector(".lista_de_musicas");
+let audio = document.querySelector("#audio");
+let input_com_imagem = document.getElementById("input_com_imagem");
+let input_com_audio = document.getElementById("input_com_audio");
+const texto_pesquisa = document.querySelector("#texto_pesquisa");
+const limpar_filtro = document.querySelector("#limpar_filtro");
 
-//Array
 let musicas = [];
 
-const Musica = (nome, descricao, imagem, audio) => ({
-  nome,
-  descricao,
-  imagem,
-  audio,
+let lista_de_generos = [
+  "Rock",
+  "MB",
+  "Brasileira"
+]
+
+
+texto_pesquisa.addEventListener("input", function () {
+  ListaComFiltro();
 });
 
+limpar_filtro.addEventListener("click", function () {
+  ListaSemFiltro();
+});
 
 function PegarURLImagem() {
   if (input_com_imagem.files.length === 0) {
@@ -23,7 +31,6 @@ function PegarURLImagem() {
   }
   return URL.createObjectURL(input_com_imagem.files[0]);
 }
-
 function PegarURLAudio() {
   if (input_com_audio.files.length === 0) {
     return "";
@@ -31,42 +38,92 @@ function PegarURLAudio() {
   return URL.createObjectURL(input_com_audio.files[0]);
 }
 
-function CriarMusica() {
+function CadastrarMusica() {
   const urlImagem = PegarURLImagem();
   const urlAudio = PegarURLAudio();
-  const novaMusica = Musica(nome.value, descricao.value, urlImagem, urlAudio);
-  musicas.push(novaMusica);
-  MostrarLista();
-  
+  const novaMusica = Musica(nome.value, genero.value, urlImagem, urlAudio);
+
+  if (VerificarCampos(novaMusica)) {
+    musicas.push(novaMusica);
+    ListaSemFiltro();
+  }
+  else {
+    alert("Preencha todos os campos obrigatórios!");
+  }
 }
 
-function MostrarLista() {
-  lista_de_musicas.innerHTML = "";
-  for (
-    let posicao_array = 0;
-    posicao_array < musicas.length;
-    posicao_array++
-  ) {
-    const div = document.createElement("div");
-    div.classList.add("card_musica");
-    div.innerHTML = `
-        <h3>${musicas[posicao_array].nome}</h3>
-        <p>${musicas[posicao_array].descricao}</p>
-        <img src = "${musicas[posicao_array].imagem}">
-        <audio src="${musicas[posicao_array].audio}" controls autoplay></audio>
-       <button onclick="RemoverElemento(${posicao_array})">
-       Remover</button>
-       </button>
-
-       `;
-    lista_de_musicas.appendChild(div);
-    alert("Música cadastrada!");
+function VerificarCampos(novaMusica) {
+  if (novaMusica.nome != "" && novaMusica.genero != "" && novaMusica.audio !== "") {
+    return true;
   }
-
+  return false;
 }
 
 function RemoverElemento(indice) {
   musicas.splice(indice, 1);
-  MostrarLista();
+  lista_de_musicas.innerHTML = "";
+  ListaSemFiltro();
 }
 
+function ListaSemFiltro() {
+  lista_de_musicas.innerHTML = "";
+  for (let i = 0; i < musicas.length; i++) {
+    const div = document.createElement("div");
+    div.classList.add("card_musica");
+    div.innerHTML = `
+        <img src = "${musicas[i].imagem}">
+        <audio src="${musicas[i].audio}" controls autoplay></audio>
+        <h2>${musicas[i].nome}</h2>
+        <div>
+        <p>${musicas[i].genero}</p>
+         <a href="${musicas[i].audio}"> Acesse o audio </a>
+         </div>
+         <button onclick="RemoverElemento(${i})"> Remover elemento </button>
+        
+         `;
+    lista_de_musicas.appendChild(div);
+  }
+}
+
+function ListaComFiltro() {
+  lista_de_musicas.innerHTML = "";
+  for (let i = 0; i < musicas.length; i++) {
+    if (musicas[i].nome === texto_pesquisa.value) {
+      const div = document.createElement("div");
+      div.classList.add("card_musica");
+      div.innerHTML = `
+           <img src = "${musicas[i].imagem}">
+      <audio src="${musicas[i].audio}" controls autoplay></audio>
+        <p>${musicas[i].nome}</p>
+        <p>${musicas[i].genero}</p>
+         <a href="${musicas[i].link}"> Acesse o link </a>
+         <button onclick="RemoverElemento(${i})"> Remover elemento </button>
+        `;
+      lista_de_musicas.appendChild(div);
+    }
+  }
+}
+
+function PreencherGeneros() {
+  for (let i = 0; i < lista_de_generos.length; i++) {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <option> ${lista_de_generos[i]} </option> 
+      `
+    genero.appendChild(div);
+
+  }
+}
+
+const Musica = (nome, genero, imagem, link) => ({
+  nome,
+  genero,
+  imagem,
+  link,
+});
+
+
+PreencherGeneros();
+
+localStorage.setItem("generos", JSON.stringify(lista_de_generos));
+localStorage.setItem("lista_de_musicas", JSON.stringify(musicas));

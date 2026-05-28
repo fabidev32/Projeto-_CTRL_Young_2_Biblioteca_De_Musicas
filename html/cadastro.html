@@ -1,44 +1,57 @@
 <!doctype html>
 <html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!doctype html>
+  <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./../css/cadastro.css" class="stylesheet" />
   </head>
+
   <body>
     <main>
-      <section class="container_cadastro">
-        <h3>Cadastre sua música favorita abaixo!</h3>
-        <div class="div_formulario">
-          <div>
-            <input
-              type="text"
-              id="nome"
-              placeholder="Digite o nome da música"
-            />
-            <input
-              type="text"
-              id="descricao"
-              placeholder="Digite a descrição do jogo"
-            />
-          </div>
-          <div>
-            <label for="input_com_audio"> Baixe a sua música! </label>
-            <input type="file" id="input_com_audio" />
-            <label for="input_com_imagem">Selecione uma imagem </label>
-            <input type="file" id="input_com_imagem" />
-          </div>
-          <button id="botao" onclick="CriarMusica()">Adicionar música</button>
-        </div>
-      </section>
 
-      <section class = "container_lista">
-        <div class="lista_de_musicas"></div>
-      </section>
+      <!-- Formulário -->
+      <div class="div_formulario">
+        <input id="nome" type="text" placeholder="Digite o nome" />
+        <select  class="genero">
+        </select  >
 
+        <input type="text" id="link" placeholder="Digite o link da musica" />
+        <label for="input_com_imagem">Selecione uma imagem</label>
+        <input type="file" id="input_com_imagem" />
+        <label for="input_com_imagem">Selecione uma música</label>
+        <input type="file" id="input_com_audio" />
+
+        <button id="cadastrar" onclick="CadastrarMusica()">Cadastrar</button>
+      </div>
+
+      <!-- Filtro dos cadastro -->
+      <h2>Confira a minha lista de musicas abaixo!</h2>
+      <div class="div_filtro">
+        <p>Filtre pelos estilos musicais! </p>
+        <input type="text" id="texto_pesquisa" />
+        <button id="limpar_filtro"> Limpar filtro </button>
+      </div>
+
+      <!-- Lista de musicas -->
+      <div class="lista_de_musicas"></div>
     </main>
 
     <script src="./../javascript/cadastro.js"></script>
   </body>
+
+  </html>
+</body>
+
 </html>
