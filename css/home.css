@@ -205,13 +205,58 @@ body {
   gap: 20px;
 }
 
-.div_estilos_musica div p {
+.genero_musical {
   width: 100px;
   padding: 5px;
   color: white;
   background-color: #837797;
   border-radius: 20px;
-  border: 5px solid #a79db1
+  border: 5px solid #a79db1;
+}
+
+/* Lógica carrossel */
+
+.section_imagens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 40px;
+  border: 2px solid #332fd0;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carrossel_de_imagens {
+  width: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrossel_trilho {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carrossel_trilho img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px;
+  border-radius: 30px;
+}
+
+#anterior,
+#proximo {
+  cursor: pointer;
+  width: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#anterior:hover,
+#proximo:hover {
+  transform: scale(1.5);
 }
 
 /* Footer */
@@ -226,53 +271,18 @@ footer {
   text-align: center;
 }
 
-/* Lógica carrossel */
-
-.section_imagens {
+.div_redes_sociais {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px;
-  border: 2px solid #332fd0;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  gap: 20px;
 }
 
-.carrossel_de_imagens {
-  width: 600px;
-  overflow: hidden; 
-  position: relative; 
-}
-
-.carrossel_trilho {
-  display: flex; 
-  transition: transform 0.5s ease-in-out; 
-  width: 100%;
-}
-
-.carrossel_trilho img {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 15px;
-  border-radius: 30px;
-}
-
-#anterior {
-  cursor: pointer;
+#redeSocial {
   width: 50px;
-  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
 }
 
-#proximo {
-  cursor: pointer;
-  width: 30px;
-  margin: 10px;
-  transition: transform 0.3s ease-in-out;
+.div_contatos p {
+  font-size: 20px;
+  font-family: FreeMono, monospace;
+  color: #f5f4f7;
 }
-
-#anterior:hover,
-#proximo:hover {
-  transform: scale(1.5);
-}
-

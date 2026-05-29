@@ -2,7 +2,7 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background-color: #e09e5d;
+  background-color: #e8dfc8;
 }
 
 h3 {
@@ -33,7 +33,7 @@ main {
   width: 70%;
   border-radius: 20px;
   border: 5px solid white;
-  background-color: #ca987c;
+  background-color: #655970;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -65,20 +65,19 @@ input[type="text"] {
   width: 90%;
   height: 40px;
   border-radius: 5px;
-  background-color: #ca987c;
+  background-color: #655970;
   border: 0px;
   border-bottom: 2px solid #af8b76;
   outline: none;
-
 }
 
 .div_formulario input[type="text"]:focus {
-  border: 3px solid #af8b76;
+  border: 3px solid #c8b99a;
 }
 
 input::placeholder {
   font-family: FreeMono, monospace;
-  color: rgb(131, 121, 121);
+  color: white;
   font-size: 20px;
   padding: 10px;
 }
@@ -89,26 +88,27 @@ input[type="file"] {
   font-family: FreeMono, monospace;
   height: 30px;
   width: 80%;
-  background-color: #be967f;
+  background-color: #51485a;
   border-radius: 10px;
-  border: 2px solid #fcc280;
+  border: 2px solid #af8b76;
   padding: 10px;
   cursor: pointer;
 }
 
 label {
-  font-size: 25px;
-  color: whitesmoke;
+  font-size: 20px;
+  font-family: FreeMono, monospace;
+  color: #f5f4f7;
 }
 
 #cadastrar {
   margin-top: 20px;
   border-radius: 80px;
-  background-color: #fcc280;
+  background-color: #554b5e;
   border: 3px solid #b39787;
   width: 250px;
   height: 50px;
-  color: #545455;
+  color: #ededf7;
   font-family: FreeMono, monospace;
   font-size: 20px;
 }
@@ -126,7 +126,7 @@ label {
 
 .div_filtro p {
   font-size: 25px;
-  color: whitesmoke;
+  color: #655970;
 }
 
 .div_filtro input {
@@ -135,9 +135,9 @@ label {
   font-family: FreeMono, monospace;
   height: 20px;
   width: 80%;
-  background-color: #fae5d9;
+  background-color: #ded9e4;
   border-radius: 10px;
-  border: 2px solid #fcc280;
+  border: 2px solid #655970;
   padding: 10px;
   cursor: pointer;
 }
@@ -149,9 +149,9 @@ label {
   font-family: FreeMono, monospace;
   width: 50%;
   height: 40px;
-  background-color: #8b6853;
+  background-color: #655970;
   border-radius: 10px;
-  border: 2px solid #fcc280;
+  border: 3px solid #c9bcd4;
   padding: 10px;
   cursor: pointer;
 }
@@ -162,7 +162,7 @@ h2 {
   font-size: 30px;
   font-family: FreeMono, monospace;
   text-transform: uppercase;
-  color: #f5f4f7;
+  color: #8c8b8d;
 }
 
 .lista_de_musicas {
@@ -184,7 +184,7 @@ h2 {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  background-color: #ca987c;
+  background-color: #655970;
   border: 2px solid rgb(247, 243, 243);
   border-radius: 30px;
   padding: 10px;
@@ -196,7 +196,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fae5d9;
+  background-color: #f5ecfd;
   border-radius: 20px;
   width: 90%;
   height: 100%;
@@ -226,8 +226,8 @@ h2 {
 .card_musica button {
   margin-top: 20px;
   border-radius: 80px;
-  background-color: #8b6853;
-  border: 4px solid #fcc280;
+  background-color: #b0a4bb;
+  border: 2px solid #453f4b;
   width: 250px;
   height: 50px;
   color: #f5f4f7;
@@ -237,4 +237,24 @@ h2 {
 
 .card_musica div p {
   color: #545455;
+}
+
+/* Estilizando o select */
+
+.genero {
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #837797;
+  border: 1px solid #af8b76;
+}
+.option {
+  background-color: #453f4b;
+  color: white;
+}
+
+.div_formulario p {
+  font-size: 20px;
+  font-family: FreeMono, monospace;
+  color: #f5f4f7;
 }

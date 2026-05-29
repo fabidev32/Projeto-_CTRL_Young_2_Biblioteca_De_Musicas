@@ -10,12 +10,7 @@ const limpar_filtro = document.querySelector("#limpar_filtro");
 
 let musicas = [];
 
-let lista_de_generos = [
-  "Rock",
-  "MB",
-  "Brasileira"
-]
-
+let lista_de_generos = ["Rock", "MB", "Brasileira"];
 
 texto_pesquisa.addEventListener("input", function () {
   ListaComFiltro();
@@ -46,14 +41,17 @@ function CadastrarMusica() {
   if (VerificarCampos(novaMusica)) {
     musicas.push(novaMusica);
     ListaSemFiltro();
-  }
-  else {
+  } else {
     alert("Preencha todos os campos obrigatórios!");
   }
 }
 
 function VerificarCampos(novaMusica) {
-  if (novaMusica.nome != "" && novaMusica.genero != "" && novaMusica.audio !== "") {
+  if (
+    novaMusica.nome != "" &&
+    novaMusica.genero != "" &&
+    novaMusica.audio !== ""
+  ) {
     return true;
   }
   return false;
@@ -76,7 +74,6 @@ function ListaSemFiltro() {
         <h2>${musicas[i].nome}</h2>
         <div>
         <p>${musicas[i].genero}</p>
-         <a href="${musicas[i].audio}"> Acesse o audio </a>
          </div>
          <button onclick="RemoverElemento(${i})"> Remover elemento </button>
         
@@ -92,11 +89,10 @@ function ListaComFiltro() {
       const div = document.createElement("div");
       div.classList.add("card_musica");
       div.innerHTML = `
-           <img src = "${musicas[i].imagem}">
+      <img src = "${musicas[i].imagem}">
       <audio src="${musicas[i].audio}" controls autoplay></audio>
         <p>${musicas[i].nome}</p>
         <p>${musicas[i].genero}</p>
-         <a href="${musicas[i].link}"> Acesse o link </a>
          <button onclick="RemoverElemento(${i})"> Remover elemento </button>
         `;
       lista_de_musicas.appendChild(div);
@@ -108,22 +104,20 @@ function PreencherGeneros() {
   for (let i = 0; i < lista_de_generos.length; i++) {
     const div = document.createElement("div");
     div.innerHTML = `
-      <option> ${lista_de_generos[i]} </option> 
-      `
+      <option class = "option"> ${lista_de_generos[i]} </option> 
+      `;
     genero.appendChild(div);
-
   }
 }
 
-const Musica = (nome, genero, imagem, link) => ({
+const Musica = (nome, genero, imagem, audio) => ({
   nome,
   genero,
   imagem,
-  link,
+  audio,
 });
-
 
 PreencherGeneros();
 
 localStorage.setItem("generos", JSON.stringify(lista_de_generos));
-localStorage.setItem("lista_de_musicas", JSON.stringify(musicas));
+ 
