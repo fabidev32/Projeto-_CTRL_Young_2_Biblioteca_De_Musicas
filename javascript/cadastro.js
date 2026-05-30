@@ -47,10 +47,9 @@ function CadastrarMusica() {
 }
 
 function VerificarCampos(novaMusica) {
-  if (
-    novaMusica.nome != "" &&
-    novaMusica.genero != "" &&
-  ) {
+  if (novaMusica.nome != "" &&
+    novaMusica.genero != "") 
+  {
     return true;
   }
   return false;
