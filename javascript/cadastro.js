@@ -50,7 +50,6 @@ function VerificarCampos(novaMusica) {
   if (
     novaMusica.nome != "" &&
     novaMusica.genero != "" &&
-    novaMusica.audio !== ""
   ) {
     return true;
   }
