@@ -1,5 +1,3 @@
-//Listar os gêneros
-let lista_de_generos = JSON.parse(localStorage.getItem("generos")) || [];
 let genero = document.querySelector(".genero");
 
 //Puxar demais variáveis
@@ -8,9 +6,12 @@ const proximo = document.getElementById("proximo");
 const div_trilho = document.querySelector(".carrossel_trilho");
 const div_bem_vindo = document.querySelector(".div_bem_vindo");
 
+//Crio a minha lista de gêneros
+let generos = ["Rock", "MB", "Brasileira"];
+
+
 let indice = 0;
 let total_imagens = 4;
-
 // Lógica do carrossel
 function AtualizarCarrossel() {
   const deslocamento = indice * 100;
@@ -33,27 +34,28 @@ function Proximo() {
   } else {
     indice = indice + 1;
   }
-  AtualizarCarrossel();
+  AtualizarCarrossel();//Lógica para clicar e levar até a seção 
+
+}
+
+function BotaoBemVindo() {
+  div_bem_vindo.scrollIntoView();
 }
 
 // Lógica para mostrar os gêneros
 
 function MostrarGeneros() {
-  for (let i = 0; i < lista_de_generos.length; i++) {
+  for (let i = 0; i < generos.length; i++) {
     const div = document.createElement("div");
-    console.log(lista_de_generos[i]);
+    console.log(generos[i]);
     div.innerHTML = `
-      <p class = "genero_musical"> ${lista_de_generos[i]} </p> 
+      <p class = "genero_musical"> ${generos[i]} </p> 
       `;
     genero.appendChild(div);
   }
 }
 
 MostrarGeneros();
+localStorage.setItem("lista_de_generos", JSON.stringify(generos));
 
-//Lógica para clicar e levar até a seção 
-
-function BotaoBemVindo() {
-    div_bem_vindo.scrollIntoView();
-}
 

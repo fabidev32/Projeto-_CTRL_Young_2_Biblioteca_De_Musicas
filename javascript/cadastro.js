@@ -1,5 +1,7 @@
+let generos = JSON.parse(localStorage.getItem("lista_de_generos")) || [];
+
 const nome = document.getElementById("nome");
-// let genero = document.getElementById("genero");
+const descricao = document.getElementById("descricao");
 let genero = document.querySelector(".genero");
 let lista_de_musicas = document.querySelector(".lista_de_musicas");
 let audio = document.querySelector("#audio");
@@ -10,7 +12,6 @@ const limpar_filtro = document.querySelector("#limpar_filtro");
 
 let musicas = [];
 
-let lista_de_generos = ["Rock", "MB", "Brasileira"];
 
 texto_pesquisa.addEventListener("input", function () {
   ListaComFiltro();
@@ -36,7 +37,7 @@ function PegarURLAudio() {
 function CadastrarMusica() {
   const urlImagem = PegarURLImagem();
   const urlAudio = PegarURLAudio();
-  const novaMusica = Musica(nome.value, genero.value, urlImagem, urlAudio);
+  const novaMusica = Musica(nome.value, genero.value, urlImagem, urlAudio, descricao.value);
 
   if (VerificarCampos(novaMusica)) {
     musicas.push(novaMusica);
@@ -48,8 +49,8 @@ function CadastrarMusica() {
 
 function VerificarCampos(novaMusica) {
   if (novaMusica.nome != "" &&
-    novaMusica.genero != "") 
-  {
+    novaMusica.genero != "" &&
+    novaMusica.descricao  != "") {
     return true;
   }
   return false;
@@ -68,13 +69,13 @@ function ListaSemFiltro() {
     div.classList.add("card_musica");
     div.innerHTML = `
         <img src = "${musicas[i].imagem}">
-        <audio src="${musicas[i].audio}" controls autoplay></audio>
         <h2>${musicas[i].nome}</h2>
         <div>
         <p>${musicas[i].genero}</p>
-         </div>
-         <button onclick="RemoverElemento(${i})"> Remover elemento </button>
-        
+        <p>${musicas[i].descricao}</p>
+        <audio src="${musicas[i].audio}" controls autoplay></audio>
+        </div>
+        <button onclick="RemoverElemento(${i})"> Remover elemento </button>
          `;
     lista_de_musicas.appendChild(div);
   }
@@ -87,35 +88,36 @@ function ListaComFiltro() {
       const div = document.createElement("div");
       div.classList.add("card_musica");
       div.innerHTML = `
-      <img src = "${musicas[i].imagem}">
-      <audio src="${musicas[i].audio}" controls autoplay></audio>
-        <p>${musicas[i].nome}</p>
+        <img src = "${musicas[i].imagem}">
+        <h2>${musicas[i].nome}</h2>
+        <div>
         <p>${musicas[i].genero}</p>
-         <button onclick="RemoverElemento(${i})"> Remover elemento </button>
-        `;
+        <p>${musicas[i].descricao}</p>
+        <audio src="${musicas[i].audio}" controls autoplay></audio>
+        </div>
+        <button onclick="RemoverElemento(${i})"> Remover elemento </button>
+         `;
       lista_de_musicas.appendChild(div);
     }
   }
 }
 
 function PreencherGeneros() {
-  for (let i = 0; i < lista_de_generos.length; i++) {
+  for (let i = 0; i < generos.length; i++) {
     const div = document.createElement("div");
     div.innerHTML = `
-      <option class = "option"> ${lista_de_generos[i]} </option> 
+      <option class = "option"> ${generos[i]} </option> 
       `;
     genero.appendChild(div);
   }
 }
 
-const Musica = (nome, genero, imagem, audio) => ({
+const Musica = (nome, genero, imagem, audio, descricao) => ({
   nome,
   genero,
   imagem,
   audio,
+  descricao,
 });
 
 PreencherGeneros();
-
-localStorage.setItem("generos", JSON.stringify(lista_de_generos));
- 
