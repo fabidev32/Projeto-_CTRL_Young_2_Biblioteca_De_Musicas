@@ -19,7 +19,6 @@ function AtualizarCarrossel() {
 }
 
 function Anterior() {
-  indice = indice === 0 ? 0 : indice - 1;
   if (indice === 0) {
     indice = 0;
   } else {
