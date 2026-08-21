@@ -12,7 +12,6 @@ const limpar_filtro = document.querySelector("#limpar_filtro");
 
 let musicas = [];
 
-
 texto_pesquisa.addEventListener("input", function () {
   ListaComFiltro();
 });

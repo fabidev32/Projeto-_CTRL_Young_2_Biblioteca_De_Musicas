@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="nome" type="text" placeholder="Digite o nome" />
+    <input type="text" id="link" placeholder="Digite o link da
+musica" />
+    <input type="text" id="descricao" placeholder="Digite a
+descrição da musica" />
+
+    <select class="genero">
+
+    </select>
+
+    <label for="input_com_imagem">
+        Selecione uma imagem
+    </label>
+    <input type="file" id="input_com_imagem" />
+
+    <label for="input_com_imagem">
+        Selecione uma música
+    </label>
+    <input type="file" id="input_com_audio" />
+
+    <button id="cadastrar" onclick="CadastrarMusica()">
+        Cadastrar
+    </button>
+
+    <div class="div_filtro">
+        <p>Filtre pelos estilos musicais!</p>
+        <input type="text" id="texto_pesquisa" />
+        <button id="limpar_filtro">
+            Limpar filtro
+        </button>
+    </div>
+
+    <div class="lista_de_musicas"> </div>
+
+    <script src="cadastro.js"></script>
+    <!-- Adicionei a tag script -->
+
+
+</body>
+
+</html>

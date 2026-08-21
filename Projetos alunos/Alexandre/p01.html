@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto01-emSala</title>
+    <link rel="stylesheet" href="p01.css">
+    <link rel="stylesheet" href="./../cadastro/cadastro.css">
+</head>
+
+<body>
+    <header class="H">
+        <div class="logo">
+            <img id="img01" src="./../midias/image.png" alt="">
+            <p class="Titulo01">...........Vinil.Music............</p>
+        </div>
+        <div class="Menu">
+            <ul class="ul01">
+                <li><a href="./../projeto01-emSala/p01.html">Home</a></li>
+                <li><a href="./../cadastro/cadastro.html">Cadastro de músicas</a></li>
+                <li><a href="">Fale conosco(inoperante)</a></li>
+            </ul>
+
+        </div>
+        <p class="TxT01">Online free music-clips! Vinil, always with great musics!</p>
+    </header>
+    <main class="Main">
+
+        <section class="carrossel_pai01">
+            <section class="carrossel_pai02">
+                <section class="carrossel_pai03">
+                    <img src="./midias/setaE.avif" onclick="anterior()" class="setaE">
+                    <section class="carrossel_pai04">
+                        <ul class="ulcarrossel01">
+                            <li class="licarrossel01"><img src="./midias/image.png" class="imgcarrossel01" alt="">
+                            </li>
+                            <li class="licarrossel01"><img src="./midias/setaE.avif" class="imgcarrossel01" alt="">
+                            </li>
+                            <li class="licarrossel01"><img src="./midias/WhatsApp_logo.png" class="imgcarrossel01" alt="">
+                            </li>
+                            <li class="licarrossel01"><img src="./midias/image.png" class="imgcarrossel01" alt="">
+                            </li>
+                            <li class="licarrossel01"><img src="./midias/image.png" class="imgcarrossel01" alt="">
+                            </li>
+                        </ul>
+                    </section>
+                    <img src="./midias/setaE.avif" onclick="posterior()" class="setaD">
+                </section>
+            </section>
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="div_filtro">
+            <i>Filtre pelos estilos musicais!</i>
+            <input type="text" id="texto_pesquisa" placeholder="Insira o filtro" />
+            <button id="limpar_filtro" onclick=""><i>
+                    Limpar filtro </i>
+            </button>
+        </div>
+    </footer>
+    <footer class="foot2-2">
+        <div class="foot2">
+            <i> Fale conosco pelo WhatsApp !!!</i>
+            <img src="./../midias/WhatsApp_logo.png" class="Wlogo">
+            <p class="phonenumber">+00 00 00000-0000</p>
+        </div>
+    </footer>
+    <script src="./p01(carrossel).js"></script>
+</body>
+
+</html>

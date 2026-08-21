@@ -1,8 +1,8 @@
 let genero = document.querySelector(".genero");
 
 //Puxar demais variáveis
-const anterior = document.getElementById("anterior");
-const proximo = document.getElementById("proximo");
+// const anterior = document.getElementById("anterior");
+// const proximo = document.getElementById("proximo");
 const div_trilho = document.querySelector(".carrossel_trilho");
 const div_bem_vindo = document.querySelector(".div_bem_vindo");
 

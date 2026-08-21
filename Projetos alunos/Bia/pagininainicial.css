@@ -1,0 +1,111 @@
+.pai {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.nav {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 60px;
+margin-top: 30px;
+}
+.div-logo {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.div-menu ul {
+display: flex;
+flex-direction: row;
+gap: 30px;
+list-style: none;
+}
+.div-menu ul li {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 5px;
+}
+.carrossel_de_imagens {
+width: 400px;
+}
+.trilho_de_imagens {
+display: flex;
+flex-direction: row;
+}
+.trilho_de_imagens img {
+width: 100%;
+border-radius: 30px;
+}
+/* .carrossel_trilho img {
+width: 100%;
+box-sizing: border-box;
+border-radius: 30px;
+} */
+#anterior,
+#proximo {
+cursor: pointer;
+width: 50px;
+transition: transform 0.3s ease-in-out;
+}
+#anterior:hover,
+#proximo:hover {
+transform: scale(1.5);
+}
+#anterior, #proximo {
+cursor: pointer;
+width: 50px;
+transition: transform 0.3s ease-in-out;
+}
+#anterior:hover, #proximo:hover {
+transform: scale(1.5);
+}
+#anterior, #proximo {
+cursor: pointer;
+width: 50px;
+transition: transform 0.3s ease-in-out;
+}
+#anterior:hover, #proximo:hover {
+transform: scale(1.5);
+}
+
+.carrossel_de_imagens {
+width: 400px;
+overflow: hidden;
+}
+
+.trilho_de_imagens {
+display: flex;
+flex-direction: row;
+transition: transform 0.5s ease-in-out;
+}
+.grid {
+display: grid;
+grid-template-columns: repeat(6fr);
+grid-template-rows: repeat(2fr);
+column-gap: 10px;
+row-gap: 10px;
+width: 80%;
+}
+.musica_01 {
+grid-column: 1/3;
+grid-row: 1/2;
+}
+.musica_02 {
+grid-column: 3/4;
+grid-row: 1/2;
+}
+.musica_03 {
+grid-column: 4/6;
+grid-row: 1/2;
+}
+.musica_04 {
+grid-column: 1/3;
+grid-row: 2/3;
+}
+.musica_05 {
+grid-column: 3/6;
+grid-row: 2/3;
+}
